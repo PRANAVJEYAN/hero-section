@@ -1,0 +1,76 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0a0a0a;
+    color: white;
+    overflow: hidden;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a, #2a2a2a);
+    overflow: hidden;
+}
+
+/* Content */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: bold;
+    opacity: 0; /* Hidden before animation */
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    opacity: 0;
+}
+
+/* Images */
+.hero-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.hero-img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    filter: grayscale(100%);
+    transition: 0.3s ease-in-out;
+    transform: scale(1);
+}
+
+/* Hover Effect */
+.hero-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.hero-img:not(:hover) {
+    filter: grayscale(100%) contrast(200%);
+}
+
+/* Mouse Movement Effect */
+.hero-img:hover {
+    position: relative;
+}
