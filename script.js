@@ -9,6 +9,7 @@ document.querySelectorAll(".hero-img").forEach((img) => {
         let x = (e.clientX / window.innerWidth - 0.5) * 10;
         let y = (e.clientY / window.innerHeight - 0.5) * 10;
         img.style.transform = `scale(1.1) translate(${x}px, ${y}px)`;
+        img.style.display = "block"; 
     });
 
     img.addEventListener("mouseleave", () => {
